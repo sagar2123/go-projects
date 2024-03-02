@@ -18,7 +18,8 @@ jobs:
 
       - name: Create Documentation
         uses: ./.github/actions/create-documentation
-        secrets: inherit
+          with: 
+            GPT_TOKEN: ${{ secrets.GPT_TOKEN }}
 
       - name: Configure Git
         run: |
