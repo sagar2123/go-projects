@@ -18,3 +18,14 @@ jobs:
 
       - name: Create Documentation
         uses: ./.github/actions/create-documentation
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "sagar.2621@gmail.com"
+          git config --global user.name "sagar2123"
+
+      - name: Commit README files
+        run: |
+          git add -A
+          git commit -m "Auto-generated README files" || echo "No changes to commit"
+          git push
