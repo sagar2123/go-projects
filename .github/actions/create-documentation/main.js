@@ -13,7 +13,7 @@ const isInExcludedFolder = (filePath) => {
 
 async function generateReadmeContent(currentContent) {
   try {
-    const content = `This is auto-generated documentation. \n`;
+    let content = `This is auto-generated documentation. \n`;
     // Use the input name defined in action.yml
     const mySecret = core.getInput("GPT_TOKEN", { required: true });
 
@@ -39,8 +39,13 @@ async function generateReadmeContent(currentContent) {
         },
       }
     );
-    core.notice("Api Response", res.data.choices[0].message.content);
-    content = content + res.data.choices[0].message.content;
+
+    if (res.data && res.data.choices && res.data.choices.length > 0) {
+        core.notice("Api Response", res.data.choices[0].message.content);
+        content += res.data.choices[0].message.content; // Append new content
+      } else {
+        core.setFailed("API response is not in the expected format or is empty.");
+      }
 
     return content;
   } catch (error) {
