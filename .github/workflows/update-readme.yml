@@ -1,0 +1,19 @@
+name: Generate Documentation
+
+on:
+  push:
+    branches: feature-*
+      release-*
+      main
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Important to fetch all history for diff
+
+      - name: Create Documentation
+        uses: ./.github/action/create-documentation
