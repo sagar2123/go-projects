@@ -17,4 +17,4 @@ jobs:
           fetch-depth: 0 # Important to fetch all history for diff
 
       - name: Create Documentation
-        uses: ./.github/action/create-documentation
+        uses: ./.github/actions/create-documentation
