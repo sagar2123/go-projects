@@ -21,7 +21,7 @@ jobs:
         with: 
           GPT_TOKEN: ${{ secrets.GPT_TOKEN }}
 
-      - name: Configure Git
+      - name: Configure Git 
         run: |
           git config --global user.email "sagar.2621@gmail.com"
           git config --global user.name "sagar2123"
