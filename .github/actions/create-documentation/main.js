@@ -58,7 +58,10 @@ async function run() {
     .filter(Boolean) // Remove empty lines
     .filter((file) => !isInExcludedFolder(file)); // Exclude files in specific folders
 
+    core.notice("Modified files", modifiedFiles);
+
   for (const file of modifiedFiles) {
+    core.notice("Individual files", file);
     if (fs.existsSync(file)) {
       const dirName = path.dirname(file);
       const baseName = path.basename(file, path.extname(file));
