@@ -1,5 +1,5 @@
 package main
 
-func Subtract(a int, b int) int {
-	return a - b
+func Sum(a int, b int) int {
+	return a + b
 }
