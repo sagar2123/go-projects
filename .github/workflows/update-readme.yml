@@ -2,7 +2,8 @@ name: Generate Documentation
 
 on:
   push:
-    branches: feature-*
+    branches: 
+      feature-*
       release-*
       main
 
