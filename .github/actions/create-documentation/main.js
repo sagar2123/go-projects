@@ -12,7 +12,7 @@ const isInExcludedFolder = (filePath) => {
 
 async function generateReadmeContent(currentContent) {
   try {
-    const content = `# Documentation for ${baseName}\n\nThis is auto-generated documentation for ${baseName}. \n`;
+    const content = `This is auto-generated documentation. \n`;
     // Use the input name defined in action.yml
     const mySecret = core.getInput("GPT_TOKEN", { required: true });
 
