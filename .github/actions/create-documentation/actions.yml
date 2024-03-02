@@ -1,0 +1,5 @@
+name: "Create documentation of the code commited"
+description: "Create documentation of the code that is present in the diff and automatically commit the created readme files to the repository"
+runs:
+  using: "node16"
+  main: "main.js"
