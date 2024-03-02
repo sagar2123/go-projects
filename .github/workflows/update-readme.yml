@@ -3,9 +3,9 @@ name: Generate Documentation
 on:
   push:
     branches: 
-      feature-*
-      release-*
-      main
+      - feature-*
+      - release-*
+      - main
 
 jobs:
   generate-docs:
