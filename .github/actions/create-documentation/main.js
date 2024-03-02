@@ -2,6 +2,7 @@ const core = require("@actions/core");
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+const axios = require("axios")
 
 const excludedFolders = [".github"]; // Add more folders to exclude as needed
 
