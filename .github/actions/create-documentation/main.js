@@ -23,7 +23,7 @@ async function generateReadmeContent(currentContent) {
         {
           role: "user",
           content:
-            "Can you please provide readme documentation for this code and return the output in the readme format " +
+            "Can you please provide readme documentation for this code and return the output in the readme format add code explaination also as part of the documentation" +
             currentContent,
         },
       ],
